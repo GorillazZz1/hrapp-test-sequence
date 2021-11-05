@@ -1,0 +1,6 @@
+{%- for d in data -%}
+{%- if d.sum|replace(',', '.')|replace(' ', '')|float > 100 -%}
+{{d.name}} - {{d.sum}}
+{%else -%}
+{%endif -%}
+{%endfor%}

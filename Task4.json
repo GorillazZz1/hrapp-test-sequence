@@ -1,0 +1,28 @@
+{
+    "app_hello": {
+        "type": "base",
+        "actions": [
+            {
+				"type": "sdk_answer_to_user",
+				"random_choice": [
+					{
+						"random_choice_greeting": "Привет"
+					},
+					{
+						"random_choice_greeting": "Доброго времени суток"
+					},
+					{
+						"random_choice_greeting": "Здравствуй"
+					}
+				],
+				"root":
+					[
+						{
+							"type": "pronounce_text",
+							"text": "random_choice_greeting"
+						}
+					]
+			}
+        ]
+    }
+}
