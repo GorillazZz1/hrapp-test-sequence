@@ -1,0 +1,50 @@
+{
+	"app_hello":{
+		"type": "sdk_answer_to_user",
+		"static": {
+			"greetings_card": {
+				"type": "list_card",
+				"cells": [
+					{
+						"greetings_params": "greetings"
+					}
+				]
+			},
+		},
+		"random_choice": [
+			{
+				"random_choice_greeting": "Здравствуйте"
+			},
+			{
+				"random_choice_greeting": "Приветствуем"
+			}
+			{
+				"random_choice_greeting": "Рады вас видеть"
+			}
+		],
+		"root":
+			[
+				{
+					"type": "pronounce_text",
+					"text": "random_choice_greeting"
+				}
+			],
+		"items": [
+			{
+				"type": "item_card",
+				"text": "greetings_card",
+			},
+			{
+				"type": "bubble_text",
+				"text": "random_choice_greeting"
+			}
+		],
+		"suggestions": [
+			{
+				"type": "suggest_text",
+				"text": "static_sg_text",
+				"title": "tittle1"
+			},
+		]
+	}
+]
