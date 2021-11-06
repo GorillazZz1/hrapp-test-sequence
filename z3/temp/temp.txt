@@ -1,0 +1,6 @@
+{# Цикл по пользователям #}
+{% for user in data %}
+{% if float((user.sum).replace(',', '.').replace(' ', '')) > 100 %}
+{{ user.name }} - {{ user.sum }}
+{% endif %}
+{% endfor %}

@@ -1,0 +1,38 @@
+{
+    "hello_scenario": {
+        "type": "base",
+        "actions": [
+            {
+                "type": "run_scenario",
+                "scenario": "say_hello"
+            }
+        ]
+    },
+
+    "say_hello": {
+        "type": "base",
+        "actions": [
+            {
+                "type": "sdk_answer_to_user",
+                "random_choice": [
+                    {
+                        "random_choice_greeting": "Hello!"
+                    },
+                    {
+                        "random_choice_greeting": "Good morning."
+                    },
+                    {
+                        "random_choice_greeting": "Hey)"
+                    }
+                ],
+                "root":[
+                    {
+                        "type": "pronounce_text",
+                        "text": "random_choice_greeting"
+                    }
+                ]
+            }
+        ]
+    }
+
+}
