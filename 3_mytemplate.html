@@ -1,0 +1,5 @@
+{% for element in main_data.data %}
+	{% if (element.sum|replace(",", ".")|replace(" ", "")|float() > 100.0) %}
+		{{ element.name }} - {{ element.sum }}
+	{% endif %}
+{% endfor %}
