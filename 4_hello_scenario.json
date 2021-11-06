@@ -1,0 +1,31 @@
+{
+  "hello_scenario": {
+    "type": "base",
+    "actions": [
+	{
+		"type": "sdk_answer_to_user",
+		"static": {},
+		"random_choice": [
+			{
+				"random_choice_greeting": "Здравствуйте"
+			},
+			{
+				"random_choice_greeting": "Приветствую"
+			},
+			{
+				"random_choice_greeting": "Добрый день"
+			}
+		],
+		"root":
+			[
+				{
+					"type": "pronounce_text",
+					"text": "random_choice_greeting"
+				}
+			],
+		"items": [],
+		"suggestions": []
+	}
+	]
+  }
+}
