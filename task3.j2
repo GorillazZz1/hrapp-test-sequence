@@ -1,0 +1,5 @@
+{% for item in data['data'] -%}
+{% if item['sum'].replace(',', '.').replace(' ', '') | float > 100 %}
+{{item['name']}} - {{item['sum']}}
+{% endif %}
+{%- endfor %}

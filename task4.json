@@ -1,0 +1,27 @@
+{
+   "hello_secenario": {
+      "type": "base",
+      "actions": [
+         {
+            "type": "sdk_answer_to_user",
+            "random_choice": [
+               {
+                  "random_hello": "Меня зовут Сбер, приятно познакомится"
+               },
+               {
+                  "random_hello": "Привет! Джой уже не терпится тебе помочь"
+               },
+               {
+                  "random_hello": "Здравствуйте! Афина активированна и готова вам помочь"
+               }
+            ],
+            "root": [
+               {
+                  "type": "pronounce_text",
+                  "text": "random_hello"
+               }
+            ]
+         }
+      ]
+   }
+}
