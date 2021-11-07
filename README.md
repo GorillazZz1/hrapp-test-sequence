@@ -100,3 +100,4 @@ pydict = {
 scenario = json.dumps(pydict, ensure_ascii=False, indent=4) 
 print(scenario)
 ```
+Ссылка на папку с .IPYNB файлами: https://cloud.mail.ru/public/QHd4/MX3tZE27Q
