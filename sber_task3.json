@@ -1,0 +1,81 @@
+{
+  "app_hello": {
+    "type": "base",
+    "actions": [
+      {
+        "type": "sdk_answer_to_user ",
+        "static": {
+          "ios_card": {
+            "type": "list_card",
+            "cells": [
+                {
+                    "ios_params": "ios"
+                }
+            ]
+        },
+        "android_card": {
+            "type": "list_card",
+            "cells": [
+                {
+                    "android_params": "android"
+                }
+            ]
+        },
+        "static_sg_dl": "www.www.www",
+        "static_sg_text": "static suggest text"
+        },
+        "random_choice": [
+          {
+            "random_choice_greeting": "Здравствуйте!"
+          },
+          {
+            "random_choice_greeting": "Категорически вас приветствую!"
+          },
+          {
+            "random_choice_greeting": "Привет!"
+          }
+        ],
+        "root": [
+          {
+            "type": "pronounce_text",
+            "text": "random_choice_greeting"
+          }
+        ],
+        "items": [
+          {
+            "type": "item_card",
+            "text": "ios_card",
+            "requirement": {
+                "type": "external",
+                "requirement": "NOVEMBER_iOS"
+            }
+          },
+          {
+            "type": "item_card",
+            "text": "android_card",
+            "requirement": {
+                "type": "external",
+                "requirement": "NOVEMBER_android"
+            }
+          },
+          {
+            "type": "bubble_text",
+            "text": "random_choice_greeting"
+          }
+        ],
+        "suggestions": [
+          {
+            "type": "suggest_text",
+            "text": "static_sg_text",
+            "title": "tittle1"
+          },
+          {
+            "type": "suggest_deeplink",
+            "title": "title2",
+            "deep_link": "static_sg_dl"
+          }
+        ]
+      }
+    ]
+  }
+}
